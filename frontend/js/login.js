@@ -55,10 +55,13 @@ let toggle = () => {
         };
   
         console.log(response);
-  
+        function Redirect() {
+            window.location.href = "after.html";
+         }
         if (response.success) {
           localStorage.setItem('token', response.authtoken);
           console.log(response.authtoken);
+          Redirect()
           // Handle successful login, e.g., redirect to another page
         } else {
           // Handle the case where login was not successful

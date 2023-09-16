@@ -7,7 +7,31 @@
     <title>Bankist</title>
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/layout.css" />
-
+    <!--intro js-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css"
+      integrity="sha512-ZltC0pC5nP28uLJ2SBRo8EmFHA+giWPQC6nM4xzwW4hXsTaIsfSMn0qTtotOP8NNWlAohVlJtDfLRKXxA7mJ4A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.css"
+      integrity="sha512-4OzqLjfh1aJa7M33b5+h0CSx0Q3i9Qaxlrr1T/Z+Vz+9zs5A7GM3T3MFKXoreghi3iDOSbkPMXiMBhFO7UBW/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css.map"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -109,7 +133,7 @@
             <span class="seconds date">00</span>
           </div>
           <div>
-            <a href="/" class="logout-btn"> &larr;&nbsp;Logout</a>
+            <a href="index.html" class="logout-btn"> &larr;&nbsp;Logout</a>
           </div>
         </div>
       </section>
@@ -226,5 +250,67 @@
       <p class="error">&nbsp;</p>
     </div>
     <script src="./js/layout.js"></script>
+    <script
+      src="https://unpkg.com/intro.js/intro.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js.map"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"
+      integrity="sha512-MCM74PPZwlAz3VdPGg3cQn4Jb83jO2Q3LGika//u7H+hyk0HfyraT0u0gVf4jB44xJj3WwbGxn45L7frballmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      introJs().setOptions({
+          steps: [
+            {
+              title: "welcome",
+              intro: "Let's go on the dashboard tour.",
+            },
+            {
+              element:document.querySelector(".balance-information"),
+              title: "USER'S BALANCE",
+              intro: "let's you check the current date and balance",
+            },
+            {
+              element:document.querySelector(".analysis"),
+              title: "ACCOUNT ANALYSIS",
+              intro: "shows the profit, loss incurred and the interest rate ongoing.",
+            },
+            {
+              element:document.querySelector(".transactions"),
+              title: "TRANSACTION HISTORY",
+              intro: "shows all the past transactions of the user.",
+            },
+            {
+              element:document.querySelector(".operations-data"),
+              title: "ACCOUNT STATISTICS",
+              intro: "let's you know more insights.",
+            },
+            {
+              element:document.querySelector(".btn-transfer"),
+              title: "TRANSFER MONEY",
+              intro: "This is where you can transfer your money to someone.",
+            },
+            {
+              element:document.querySelector(".btn-request"),
+              title: "REQUEST LOANS",
+              intro: "you can request for loans at an interest rate.",
+            },
+            {
+              element:document.querySelector(".btn-close"),
+              title: "CLOSE THE ACCOUNT",
+              intro: "and close the account when not in use.",
+            },
+            {
+              element:document.querySelector(".logout-btn"),
+              title: "LOGOUT OF THE DASHBOARD",
+              intro: "YOU'RE ALL THERE.",
+            }
+          ],
+          showProgress: true
+        }).start();
+    </script>
   </body>
 </html>

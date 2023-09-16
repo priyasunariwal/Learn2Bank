@@ -26,4 +26,17 @@ router.post('/uploadmessage',fetchPUsers, async (req, res) => {
 
 });
 
+router.get('/getyourmes',fetchPUsers,async(req,res)=>{
+
+    const nmessage = await Message.find({PeopleUser: req.pusers.id});
+    res.json(nmessage);
+
+}); 
+
+router.get('/getallmes',async(req,res)=>{
+    const nmessage = await Message.find();
+    res.json(nmessage);
+
+});
+
 module.exports = router;

@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 <!-- Font Google -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 <script src="https://kit.fontawesome.com/bf01b7fd8f.js" crossorigin="anonymous"></script>
@@ -24,10 +25,10 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Features</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">GOVT SCHEMES</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Faq</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">Contact</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Bank Access</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">GOVT SCHEMES</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">FAQ</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Contact</a> </li>
         <li class="nav-item"> <a class="nav-link" href="./login_dashboard.html" >Log In</a> </li>
 
       </ul>
@@ -86,7 +87,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="about-btn">Learn More</a> </div>
+          
       </div>
     </div>
   </div>
@@ -110,21 +111,7 @@
   </div>
 </section>
 
-<section class="video-section prelative text-center white">
-  <div class="section-padding video-overlay-2">
-    <div class="container">
-      <h3>Watch Now</h3>
-      <i class="fa fa-play" id="video-icon-2" aria-hidden="true"></i>
-      <div class="video-popup-2">
-        <div class="video-src-2">
-          <div class="iframe-src-2">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VksG_1r-gH8?si=q1mTOLvWp3uHRutQ" title="YouTube video player" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-------Video End-------> 
+<!-------Video End-------> 
 
 <!-------Features Start------->
 <section class="feature section-padding" data-scroll-index='2'>
@@ -164,7 +151,7 @@
             <!-- Modify the image size by specifying width and height -->
 <div class="col-md-6 d-none d-md-block d-lg-block">
   <div class="feature-mobile">
-      <img src="images/dashboard.png" class="img-fluid wow fadeInUp" width="700" height="700" />
+      <img src="images/dashboard_ss.jpg" class="img-fluid wow fadeInUp" width="700" height="700" />
       <!-- Adjust the width and height values to your desired size -->
   </div >
   <div style="margin-top:80px"><a href="bankindex.html"><button type="submit" class="about-btn">JOIN NOW</button></a></div>
@@ -360,7 +347,7 @@
                 <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
                   <div class="media-body">
                     <p class="text-uppercase">E-mail</p>
-                    <p class="text-uppercase"><a class="text-white" href="mailto:abcdefg@gmail.com">yogeshsingh.now@gmail.com</a> </p>
+                    <p class="text-uppercase"><a class="text-white" href="mailto:abcdefg@gmail.com">abc@gmail.com</a> </p>
                   </div>
                 </div>
                 <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin"></i>
@@ -387,7 +374,7 @@
     <div class="row">
       <div class="col-md-12">
         <p>Copyright: © 2021 [Your Organization Name]</p>
-        <P></P>
+        <br>
         <p class="footer-icons"><i class="fa-brands fa-instagram fa-2xl"></i>
           <i class="fa-brands fa-twitter fa-2xl"></i>
         </p> 
@@ -430,29 +417,6 @@ $(document).ready(function(e) {
 
 });
 
-
-$(document).ready(function(e) {
-  $('#video-icon-2').on('click',function(e){
-	e.preventDefault();
-	$('.video-popup-2').css('display','flex');
-	$('iframe-src-2').slideDown();
-	});
-	$('.video-popup-2').on('click',function(e){
-	var $target = e.target.nodeName;
-	var video_src = $(this).find('iframe').attr('src');
-	if($target != 'IFRAME'){
-	$('.video-popup-2').fadeOut();
-	$('.ifrane-src-2').slideUp();
-	$('.video-popup-2 iframe').attr('src'," ");
-	$('.video-popup-2 iframe').attr('src',video_src);
-	}
-	});
-
-	$('.slider').bxSlider({
-	pager: false
-	});
-
-});
     
 $(window).on("scroll",function () {
 
@@ -484,7 +448,7 @@ $(window).on("load",function (){
 	$.scrollIt({
 	
 	easing: 'swing',      // the easing function for animation
-	scrollTime: 900,       // how long (in ms) the animation takes
+	scrollTime: 900,       // how long (in ms) the animation takes     
 	activeClass: 'active', // class given to the active nav element
 	onPageChange: null,    // function(pageIndex) that is called when page is changed
 	topOffset: -63
@@ -492,5 +456,6 @@ $(window).on("load",function (){
 });
 
 </script>
+
 </body>
 </html>

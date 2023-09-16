@@ -27,6 +27,11 @@ body {
   margin-bottom: 2rem;
 }
 
+.field-input:focus {
+  background-color: rgb(240, 213, 237);
+  
+}
+
 form input:nth-child(2) {
   margin-bottom: 4rem;
 }
@@ -43,6 +48,7 @@ form input:nth-child(2) {
 
 .btn:hover {
   background-color: #52a05c;
+  border: 3px solid blueviolet;
   cursor: pointer;
 }
 

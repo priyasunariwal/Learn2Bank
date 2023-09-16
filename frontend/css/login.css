@@ -93,6 +93,7 @@ body {
 
 .input-group input:focus {
     border: 0.125rem solid var(--primary-color);
+    
 }
 
 .form button {
